@@ -8,18 +8,22 @@ public class Przyklad01 {
 		System.out.println(st);
 		System.out.println(st.getImie());
 		System.out.println(st.getKierunek());
+		System.out.println(st.kimJestem());
+		System.out.println();
 		
 		// Student jest "podtypem" Osoby, tzn. student moze byc uzyty wszedzie tam gdzie oczekiwan jest osoba
 		// Mozna studenta wpisac na zmienna typu Osoba
 
 		Osoba jakoOsoba = st;
 		System.out.println(jakoOsoba.getImie());
+		System.out.println(jakoOsoba.kimJestem());
 		
 		// NK System.out.println(jakoOsoba.getKierunek());
 		
 		// Mozna tez przekazac jako parametr oczekujacej Osoby
 		Sklep.zakupy(st);
 		Sklep.zakupy(jakoOsoba);
+		
 		
 	}
 

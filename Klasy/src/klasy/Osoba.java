@@ -59,6 +59,10 @@ public class Osoba {
 		this.dataUrodzenia = dataUrodzenia;
 	}
 	
+	public String kimJestem() {
+		return "Jestem Osoba";
+	}
+	
 	
 	
 	

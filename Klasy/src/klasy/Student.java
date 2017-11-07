@@ -38,5 +38,15 @@ public class Student extends Osoba {
 		this.kierunek = kierunek;
 	}
 	
+	// natpisanie medoty z nadklasy, override nie jest wymagane ale mile widziane
+	@Override
+	public String kimJestem() {
+		return "Jestem Studentem";
+	}
+	
+    @Override
+    public String toString() {
+    	return super.toString() + ",student " + rokStudiow + " Rok Studiow na kierunku " + kierunek;
+    }
 	
 }
