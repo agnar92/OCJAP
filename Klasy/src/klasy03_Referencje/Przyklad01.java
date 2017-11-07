@@ -1,4 +1,4 @@
-package klasy;
+package klasy03_Referencje;
 
 import java.time.*;
 

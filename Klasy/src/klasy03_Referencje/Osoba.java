@@ -1,11 +1,11 @@
-package klasy;
+package klasy03_Referencje;
 
 import java.time.*;
 
 public class Osoba {
 	
-	private String imie, nazwisko;
-	private LocalDate dataUrodzenia;
+	String imie, nazwisko;
+	LocalDate dataUrodzenia;
 	
 	Osoba(){
 		
@@ -34,32 +34,6 @@ public class Osoba {
 	public String toString() {
 		return imie + " " + nazwisko + " ur: " + dataUrodzenia;
 	}
-
-	public String getImie() {
-		return imie;
-	}
-
-	public void setImie(String imie) {
-		this.imie = imie;
-	}
-
-	public String getNazwisko() {
-		return nazwisko;
-	}
-
-	public void setNazwisko(String nazwisko) {
-		this.nazwisko = nazwisko;
-	}
-
-	public LocalDate getDataUrodzenia() {
-		return dataUrodzenia;
-	}
-
-	public void setDataUrodzenia(LocalDate dataUrodzenia) {
-		this.dataUrodzenia = dataUrodzenia;
-	}
-	
-	
 	
 	
 
