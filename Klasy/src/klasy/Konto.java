@@ -28,20 +28,38 @@ public class Konto {
 		return saldo;
 	}
 
-	public void wplata(int saldo) {
-		this.saldo += saldo;
+	public void wplata(int kwota) {
+		if( kwota <= 0) {
+			throw new IllegalArgumentException("Ujemna kwota wplata");			
+		}
+		
+		this.saldo += kwota;
+		
 	}
 	
-	public void wyplata(int saldo) {
-		this.saldo -= saldo;
+	public void wyplata(int kwota) throws BrakSrodkow {
+		if( kwota <= 0) {
+			throw new IllegalArgumentException("Ujemna kwota wplata");			
+		}
+		
+		if(kwota > saldo) {
+			throw new BrakSrodkow("Za malo Kasy na koncie " + numer);
+		}
+		this.saldo -= kwota;
 	}
 	
-	public static void przelew(Konto a, Konto b, int kwota ) {
+	public static void przelew(Konto a, Konto b, int kwota ) throws BrakSrodkow {
+		if( kwota <= 0) {
+			throw new IllegalArgumentException("Ujemna kwota wplata");			
+		}
 		a.wyplata(kwota);
 		b.wplata(kwota);
 	}
 	
 	public void przelew(Konto cel, int kwota ) {
+		if( kwota <= 0) {
+			throw new IllegalArgumentException("Ujemna kwota wplata");			
+		}
 		this.saldo -= kwota;
 		cel.saldo += kwota;
 	}
