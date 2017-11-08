@@ -20,10 +20,6 @@ public class Porownywania {
 		System.out.println(a.equals(c));
 		System.out.println(a.equals(d));
 		System.out.println(a.equals(e));
-		
-		
-		
-		
 
 	}
 
